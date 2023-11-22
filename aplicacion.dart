@@ -7,7 +7,7 @@ class AppU3T2 extends StatefulWidget {
 }
 
 class _AppU3T2State extends State<AppU3T2> {
-  final RestauranteDB _restauranteService = RestauranteDB();
+
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ class _AppU3T2State extends State<AppU3T2> {
                 setState(() {});
               } catch (error) {
                 print('Error al agregar: $error');
-                // Puedes mostrar un mensaje de error al usuario si es necesario
+
               }
             }),
           ],
@@ -159,7 +159,7 @@ class _AppU3T2State extends State<AppU3T2> {
                 setState(() {});
               } catch (error) {
                 print('Error al actualizar: $error');
-                // Puedes mostrar un mensaje de error al usuario si es necesario
+
               }
             }),
           ],
@@ -181,7 +181,7 @@ class _AppU3T2State extends State<AppU3T2> {
             }),
             _buildDialogButton('Eliminar', () async {
               try {
-                String idRestaurante = restaurante['id']; // Obtén el ID del documento
+                String idRestaurante = restaurante['id'];
                 if (idRestaurante != null && idRestaurante.isNotEmpty) {
                   await RestauranteDB.eliminarRestaurante(idRestaurante);
                   Navigator.of(context).pop();
@@ -191,7 +191,7 @@ class _AppU3T2State extends State<AppU3T2> {
                 }
               } catch (error) {
                 print('Error al eliminar: $error');
-                // Puedes mostrar un mensaje de error al usuario si es necesario
+
               }
             }),
           ],
